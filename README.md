@@ -154,10 +154,138 @@ File: `src/main/resources/static/index.html`
 <head>
   <meta charset="UTF-8">
   <title>☕ Coffee Maker Control Panel</title>
-  <!-- style omitted for brevity (same as in original) -->
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+      padding-top: 50px;
+    }
+
+    h1 {
+      color: #5e3c00;
+    }
+
+    button {
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      background-color: #6f4e37;
+      color: white;
+      border-radius: 8px;
+      transition: transform 0.2s, background-color 0.3s;
+      cursor: pointer;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background-color: #563926;
+    }
+
+    #log {
+      margin-top: 30px;
+      font-weight: bold;
+      color: #2b2b2b;
+    }
+
+    .gauge-container {
+      width: 300px;
+      margin: 30px auto;
+      background-color: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .gauge-fill {
+      height: 30px;
+      width: 80%; /* initial fill level */
+      background-color: #4caf50;
+      transition: width 0.6s ease-in-out;
+    }
+
+    .brew-animation {
+      font-size: 24px;
+      margin-top: 20px;
+      animation: bounce 0.6s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+  </style>
 </head>
 <body>
-  <!-- UI elements and JavaScript (same as original) -->
+  <h1>☕ Coffee Maker Control Panel</h1>
+
+  <button onclick="brewCoffee()">Brew Coffee</button>
+  <button onclick="refillWater()">Refill Water</button>
+  <button onclick="refillBeans()">Refill Beans</button>
+
+  <div class="gauge-container">
+    <div class="gauge-fill" id="coffeeGauge"></div>
+  </div>
+
+  <div id="animation" class="brew-animation" style="display: none;">Brewing...</div>
+  <div id="log">Ready.</div>
+
+  <script>
+    let coffeeLevel = 80; // Initial coffee level (0–100)
+
+    function updateLog(message) {
+      document.getElementById("log").innerText = message;
+    }
+
+    function updateGauge() {
+      const gauge = document.getElementById("coffeeGauge");
+      gauge.style.width = coffeeLevel + "%";
+      if (coffeeLevel <= 20) {
+        gauge.style.backgroundColor = "#ff5722"; // red
+      } else if (coffeeLevel <= 50) {
+        gauge.style.backgroundColor = "#ffc107"; // yellow
+      } else {
+        gauge.style.backgroundColor = "#4caf50"; // green
+      }
+    }
+
+    function brewCoffee() {
+      document.getElementById("animation").style.display = "block";
+      fetch('/brew', { method: 'POST' })
+        .then(() => {
+          coffeeLevel = Math.max(coffeeLevel - 20, 0);
+          updateGauge();
+          updateLog("Brewing coffee...");
+        })
+        .catch(() => updateLog("Failed to brew coffee."))
+        .finally(() => {
+          setTimeout(() => {
+            document.getElementById("animation").style.display = "none";
+          }, 2000);
+        });
+    }
+
+    function refillWater() {
+      fetch('/refill/water', { method: 'POST' })
+        .then(() => {
+          updateLog("Refilling water...");
+        })
+        .catch(() => updateLog("Failed to refill water."));
+    }
+
+    function refillBeans() {
+      fetch('/refill/beans', { method: 'POST' })
+        .then(() => {
+          coffeeLevel = 100;
+          updateGauge();
+          updateLog("Refilling beans...");
+        })
+        .catch(() => updateLog("Failed to refill beans."));
+    }
+
+    // Initialize
+    updateGauge();
+  </script>
 </body>
 </html>
 ```
