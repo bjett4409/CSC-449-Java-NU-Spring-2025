@@ -3,6 +3,7 @@
 ![Java](https://img.shields.io/badge/Java-21-blue?logo=java)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.5-brightgreen?logo=springboot)
 ![Gradle](https://img.shields.io/badge/Build-Gradle-02303A?logo=gradle)
+![CI](https://github.com/bjett4409/CSC-449-Java-NU-Spring-2025/actions/workflows/springboot.yml/badge.svg?branch=coffeemaker)
 ![Status](https://img.shields.io/badge/Status-Working-success)
 ![Deploy](https://img.shields.io/badge/Deploy-Live-green?logo=vercel)
 
