@@ -1,5 +1,11 @@
 # Coffeemaker - GitHub Actions CI Pipeline ☕
 
+![Java](https://img.shields.io/badge/Java-21+-blue.svg)
+![Gradle](https://img.shields.io/badge/Build-Gradle-02303A?logo=gradle)
+![JUnit](https://img.shields.io/badge/Tested%20With-JUnit%205-purple.svg)
+![CI](https://github.com/bjett4409/CSC-449-Java-NU-Spring-2025/actions/workflows/ci.yml/badge.svg)
+![Status](https://img.shields.io/badge/Status-Active-success)
+
 A Java-based point-of-sale (POS) simulation system tailored for a coffeemaker environment. This application manages users, transactions, payment methods, and basic authentication, all built using standard Java with Gradle and JUnit for testing.
 
 > GitHub Repository: [https://github.com/bjett4409/CSC-449-Java-NU-Spring-2025/tree/coffeemaker-ci-github](https://github.com/bjett4409/CSC-449-Java-NU-Spring-2025/tree/coffeemaker-ci-github)
