@@ -183,10 +183,6 @@ jobs:
 
 ## 📷 Sample Test Reports
 
-- Test Summary Classes
-![test-summary-classes.jpg](Screenshots/test-summary-classes.jpg)
-- Test Summary Packages
-![test-summary-packages.jpg](Screenshots/test-summary-packages.jpg)
 - Service Tests
 ![service-tests.jpg](Screenshots/service-tests.jpg) Service Tests
 
