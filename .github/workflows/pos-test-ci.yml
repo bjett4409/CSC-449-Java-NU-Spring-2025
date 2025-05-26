@@ -1,0 +1,30 @@
+name: Maven Test and Report
+
+on:
+  push:
+    branches: [ pos-test-ci ]
+  pull_request:
+    branches: [ pos-test-ci ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Java 17
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Build and test with Maven
+      run: mvn clean test site
+
+    - name: Upload Surefire HTML Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: surefire-report
+        path: target/site/surefire-report.html

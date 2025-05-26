@@ -1,0 +1,44 @@
+# Maven output
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse & IntelliJ
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Allure results (runtime data)
+/allure-results/
+/target/allure-results/
+
+# Surefire test reports (optional: keep if pushing raw test data)
+/target/surefire-reports/
+
+# Coverage tools
+jacoco.exec
+*.exec
+
+# Build artifacts
+*.class
+*.jar
+*.war
+*.ear
+
+# Others
+*.swp
+*.tmp
+*~

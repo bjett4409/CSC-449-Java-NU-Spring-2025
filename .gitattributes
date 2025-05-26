@@ -1,0 +1,19 @@
+# Ensure consistent line endings
+* text=auto
+
+# Treat Java files as UTF-8
+*.java text eol=lf
+
+# Normalize XML/HTML config files
+*.xml text eol=lf
+*.html text eol=lf
+
+# Markdown / Docs
+*.md text
+
+# Exclude test results and binaries from diff
+*.log diff=astextplain
+*.class binary
+*.jar binary
+*.war binary
+*.zip binary
