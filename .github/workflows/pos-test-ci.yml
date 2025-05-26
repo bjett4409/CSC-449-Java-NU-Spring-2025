@@ -41,4 +41,4 @@ jobs:
 
       with:
         name: allure-report
-        path: allure-maven-plugin/index.html
+        path: /index.html
