@@ -4,7 +4,6 @@
 ![Spring Boot](https://img.shields.io/badge/Spring--Boot-3.4.5-green.svg)
 ![Gradle](https://img.shields.io/badge/Build-Gradle-02303A?logo=gradle)
 ![Build Status](https://github.com/bjett4409/CSC-449-Java-NU-Spring-2025/actions/workflows/springboot.yml/badge.svg)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 This repository showcases multiple Java projects built with **Spring Boot** and **Gradle** for CSC-449 (Software Engineering) at **National University – Spring 2025**. Each branch represents a separate tutorial, application, or assignment.
 
@@ -133,6 +132,44 @@ Visit: <http://localhost:8080>
 
 ---
 
+### 🧾 `pos-test-ci`
+
+- **Project:** Point-of-Sale (POS) System – GitHub Actions CI/CD Pipeline
+- **Description:** A Java-based POS simulation built without Spring Boot to demonstrate CI pipeline integration, test automation, and professional reporting for software engineering documentation.
+- **GitHub Repository:** <https://github.com/bjett4409/CSC-449-Java-NU-Spring-2025/tree/pos-test-ci>
+- **Technologies:**
+  - Java 17 (Temurin)
+  - Maven
+  - JUnit 5
+  - Allure Reporting
+  - Maven Surefire
+  - GitHub Actions
+
+- **Features:**
+  - Fully object-oriented POS logic with users, roles, payments, and transactions
+  - Unit tests for services (TransactionService, PaymentService)
+  - GitHub Actions CI pipeline with:
+    - ✅ Java setup
+    - ✅ Allure CLI installation
+    - ✅ Test execution + HTML report generation
+    - ✅ Artifact upload for Allure & Surefire
+
+- **Run Instructions:**
+
+  ```bash
+  git clone https://github.com/bjett4409/CSC-449-Java-NU-Spring-2025.git
+  cd CSC-449-Java-NU-Spring-2025
+  git checkout pos-test-ci
+  mvn clean test site allure:report
+  ```
+
+Reports:
+
+- **Surefire:** `target/site/surefire-report.html`
+- **Allure:** `target/allure-results/index.html`
+
+---
+
 ### ✅ Prerequisites
 
 - **Java JDK 21+**
@@ -170,4 +207,5 @@ This repo is part of coursework for `CSC-449: Software Engineering, National Uni
 
 ### 📬 Contact
 
-**Author:** Brandon Jett
+- **Author:** Brandon Jett
+- **Professor:** Dr. Pradip Peter Dey, Ph.D.
