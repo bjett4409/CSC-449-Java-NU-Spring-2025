@@ -1,21 +1,25 @@
 # Code of Conduct
 
-We are committed to providing a welcoming and respectful environment for all participants.
+## 📜 Our Pledge
 
-## Expected Behavior
+We as contributors and maintainers pledge to make participation in this project a harassment-free experience for everyone.
+
+## ✅ Expected Behavior
 
 - Be respectful and inclusive.
-- Collaborate openly and constructively.
-- Respect differing viewpoints and experiences.
+- Communicate openly and constructively.
+- Assume positive intent and listen actively.
 
-## Unacceptable Behavior
+## 🚫 Unacceptable Behavior
 
-- Harassment or discrimination of any kind.
-- Personal attacks or trolling.
-- Disruptive behavior during discussions or reviews.
+- Harassment or offensive comments.
+- Personal attacks or threats.
+- Discriminatory language or exclusionary jokes.
 
-## Enforcement
+## 🛡️ Enforcement
 
-Violations may result in warnings, removal from the repository, or being reported to academic authorities if applicable.
+Instances of abusive or unacceptable behavior may be reported by contacting the repository maintainers. All complaints will be reviewed and investigated promptly.
 
-Let's work together to make this a supportive and productive learning environment.
+---
+
+Let’s maintain a respectful and inclusive community!

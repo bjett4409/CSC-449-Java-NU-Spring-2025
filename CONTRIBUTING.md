@@ -1,19 +1,22 @@
 # Contributing Guidelines
 
-Thank you for considering contributing to this project!
+Thank you for your interest in contributing to this repository!
 
-## 🧑‍💻 How to Contribute
+## 💡 How to Contribute
 
-- Fork the repository and clone your fork.
-- Create a new branch for your feature or fix.
-- Make your changes with clear commit messages.
-- Submit a pull request to the `main` or `pos-test-ci` branch.
+- Fork the repository.
+- Create a new branch for your changes.
+- Write clear, descriptive commit messages.
+- Ensure your changes follow project structure and naming conventions.
+- Submit a pull request for review.
 
-## ✅ Contribution Tips
+## 📌 Contribution Scope
 
-- Follow consistent code style (Java, JUnit 5, Maven).
-- Write or update tests for new features.
-- Keep pull requests focused and atomic.
-- If applicable, update README with your changes.
+- Fix bugs or improve documentation.
+- Add new unit tests.
+- Extend features in Spring Boot apps or utility services.
+- Enhance CI/CD or reporting pipelines.
 
-## Thank you for your contributions
+---
+
+We welcome your collaboration to improve the educational value and functionality of this repository!
