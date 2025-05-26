@@ -2,7 +2,7 @@
 
 ## 🔐 Supported Versions
 
-Security updates are provided on an academic basis. Only active semester branches (e.g., `main`, `coffeemaker`) receive security attention.
+Security updates are provided on an academic basis. Only active semester branches (e.g., `main`, `gs-serving-web-content`) receive security attention.
 
 | Branch        | Supported |
 |---------------|-----------|
