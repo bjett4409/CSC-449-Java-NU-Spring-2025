@@ -278,7 +278,7 @@ GitHub: [@bjett4409](https://github.com/bjett4409)
 
 ---
 
-## 📄 License
+## 📄 MIT License
 
 This project is licensed under the **MIT License**.  
 See the [LICENSE.txt](LICENSE.txt) file for full details.
