@@ -30,13 +30,15 @@ jobs:
       run: mvn clean test site allure:report
 
     - name: Upload Surefire HTML Report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
+
       with:
         name: surefire-report
         path: target/site/surefire-report.html
 
     - name: Upload Allure HTML Report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
+
       with:
         name: allure-report
         path: target/site/allure-maven-plugin/index.html
